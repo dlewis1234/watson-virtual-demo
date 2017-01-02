@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Virtual Agent Demo!</title>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css"
+	rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="box" style="height: 372px">
+					<form role="form">
+						<div id="text" class="pre-scrollable chat" style="height: 300px"></div>
+
+
+						<div class="input-group">
+							<input id="chatText" type="text" class="form-control"
+								placeholder="Chat here..."> <span
+								class="input-group-btn">
+								<button type="submit" class="btn btn-primary"
+									onclick="sendChat();return false;">Submit</button>
+							</span>
+						</div>
+
+
+
+					</form>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="box" style="height: 372px">
+					<img alt="Bootstrap Image Preview" src="img/ben.jpg"
+						class="pull-right">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="test" style="display: none;"></div>
+	<div class="modal fade bs-example-modal-sm" id="myPleaseWait"
+		tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						<span class="glyphicon glyphicon-time"> </span>Please Wait
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="progress">
+						<div
+							class="progress-bar progress-bar-info
+                    progress-bar-striped active"
+							style="width: 100%"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="disputeModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Dispute Charge</h4>
+				</div>
+				<div class="modal-body">
+					<p>submit form goes here</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						onclick="sendDispute();">Submit</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<div id="fraudModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Report Fraud</h4>
+				</div>
+				<div class="modal-body">
+					<p>submit form goes here</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						onclick="sendDispute();">Submit</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript"
+		src="//cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
+	<script type="text/javascript" src="js/vertx-eventbus.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

@@ -15,6 +15,7 @@ eb.onopen = function() {
 function sendChat() {
 	$('#text').append(
 			'<span class="customer">' + $('#chatText').val() + '</span>');
+	$('#chatText').val(' ');
 	msg1.context = $('#test').text();
 	msg1.msg = $('#chatText').val();
 	eb.send("send-msg", JSON.stringify(msg1), function(err, reply) {
@@ -32,6 +33,11 @@ function sendChat() {
 			setTimeout(function() {
 				$('#fraudModal').modal('show');
 			}, 1500);
+			break;
+		case "goodbye":
+			setTimeout(function() {
+				$('#surveyModal').modal('show');
+			},1500);
 			break;
 		}
 	});

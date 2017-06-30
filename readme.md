@@ -14,3 +14,6 @@ This project requires Java 1.8+
 
 The project is built as a FAT jar (ie all dependencies are included). To run type java -jar watson-virtual-demo.jar.  The open a browser and navigate to http://localhost:8080
 
+### Updated
+
+This file has been updated 
